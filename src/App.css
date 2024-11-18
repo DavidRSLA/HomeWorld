@@ -1,0 +1,238 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* App Header */
+.App h1 {
+  text-align: center;
+  background-color: #004aad;
+  color: white;
+  padding: 20px 0;
+  margin: 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Task Form */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  max-width: 600px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form input,
+form textarea,
+form button {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #004aad;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #003a8c;
+}
+
+/* Task List Container */
+.task-list {
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.task {
+  background-color: white;
+  margin-bottom: 15px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.task.completed {
+  border-left: 5px solid #00a859;
+  opacity: 0.9;
+}
+
+/* Task Info */
+.task-info h3 {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+  color: #004aad;
+}
+
+.task-info p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Task Actions */
+.task-actions {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.task-actions button,
+.task-actions label {
+  background-color: #004aad;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.task-actions label {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.task-actions input[type="file"] {
+  display: none;
+}
+
+.task-actions button:hover,
+.task-actions label:hover {
+  background-color: #003a8c;
+}
+
+/* File Handling Buttons */
+.btn-remove-file {
+  background-color: #f0ad4e;
+}
+
+.btn-remove-file:hover {
+  background-color: #ec971f;
+}
+
+.btn-submit {
+  background-color: #00a859;
+}
+
+.btn-submit:hover {
+  background-color: #008c47;
+}
+
+.btn-delete {
+  background-color: #d9534f;
+}
+
+.btn-delete:hover {
+  background-color: #c9302c;
+}
+
+.btn-download {
+  background-color: #5bc0de;
+}
+
+.btn-download:hover {
+  background-color: #31b0d5;
+}
+
+/* File Preview */
+.file-preview {
+  background-color: white;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.file-preview h4 {
+  color: #004aad;
+  margin-bottom: 20px;
+}
+
+.file-preview img,
+.file-preview embed {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.file-preview button {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.file-preview button:hover {
+  background-color: #c9302c;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  form,
+  .task-list,
+  .file-preview {
+    width: 90%;
+  }
+
+  .task-actions button {
+    width: 100%;
+  }
+
+  .task-actions {
+    flex-direction: column;
+  }
+}
+
+/* Task Filter */
+.task-filter {
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.task-filter select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+  width: 50%;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.task-filter select:hover {
+  border-color: #004aad;
+}
